@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expense tracker</title>
+
+    <!-- fontAwesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1 class="title">expense tracker <i class="fa-solid fa-coins"></i></h1>
+    <!-- main start -->
+    <main>
+      <div class="balance-container">
+        <h2>your balance</h2>
+        <p id="balance">$0.00</p>
+      </div>
+      <div class="income-expense">
+        <div class="income-container">
+          <h4>income</h4>
+          <p id="income">$0.00</p>
+        </div>
+        <div class="expense-container">
+          <h4>expense</h4>
+          <p id="expense">0.00</p>
+        </div>
+      </div>
+      <div class="history-container">
+        <h2>history</h2>
+        <ul class="list-container" id="list-container">
+          <li class="minus">
+            <span>cash</span> <span>-500</span>
+            <button class="btn update-btn">
+              <i class="fa-sharp fa-solid fa-pen"></i>
+            </button>
+            <button class="btn delete-btn">
+              <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li class="plus">
+            <span>rent</span> <span>-500</span>
+            <button class="btn update-btn">
+              <i class="fa-sharp fa-solid fa-pen"></i>
+            </button>
+            <button class="btn delete-btn">
+              <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="input-form">
+        <h1 class="sub-title">add new transaction</h1>
+        <form class="input-container" id="form">
+          <label for="transaction">transaction</label><br />
+          <input
+            type="text"
+            class="transaction"
+            id="transaction"
+            placeholder="enter your transaction"
+          /><br />
+          <label for="amount">amount (negative -expense,possitive-income</label
+          ><br />
+          <input
+            type="number"
+            class="amount"
+            id="amount"
+            placeholder="enter your amount"
+          />
+          <br />
+          <button class="submit" id="button">add transaction</button>
+        </form>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- custom script -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
